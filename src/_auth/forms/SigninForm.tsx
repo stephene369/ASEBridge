@@ -36,7 +36,7 @@ const SigninForm = () => {
 
       if (!session) {
         toast({ title: "Login failed. Please try again." });
-        navigate("/asebridge/")
+        navigate("/asebridge/sign-in")
         return;
       }
 
