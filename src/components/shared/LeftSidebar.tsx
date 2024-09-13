@@ -24,7 +24,7 @@ const LeftSidebar = () => {
         <Link to={`/asebridge/profile/${user.id}`} className='flex gap-3 items-center'>
           <img
             className='h-14 w-14 rounded-full'
-            src={user.imageUrl || '/assets/icons/ceholder.svg'}
+            src={user.imageUrl || '/asebridge/assets/icons/profile-placeholder.svg'}
             alt="profile"
           />
 

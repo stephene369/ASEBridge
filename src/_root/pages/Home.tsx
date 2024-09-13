@@ -6,7 +6,6 @@ import PostCard from '../../components/shared/PostCard';
 function Home() {
   const {data: posts, isPending:isPostLoading } = useGetRecentPosts()
 
-
   return (
     <div className="flex flex-1">
       <div className="home-container">

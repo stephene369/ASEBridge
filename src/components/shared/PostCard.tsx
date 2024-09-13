@@ -18,7 +18,7 @@ const PostCard = ({ post }: PostCardProps) => {
         <div className="flex items-center gap-3">
           <Link to={`/asebridge/profile/${post.creator.id}`} >
             <img
-              src={post?.creator?.imageUrl || '/assets/icons/profile-placeholder.svg'}
+              src={post?.creator?.imageUrl || '/asebridge/assets/icons/profile-placeholder.svg'}
               alt="creator"
               className='rounded-full w-12 lg:h-12'
             />
@@ -58,7 +58,7 @@ const PostCard = ({ post }: PostCardProps) => {
         </div>
 
         <img
-          src={post.imageUrl || '/assets/icons/profile-placeholder.svg'}
+          src={post.imageUrl || '/asebridge/assets/icons/profile-placeholder.svg'}
           className='post-cart_img'
           alt='post image'
         />
