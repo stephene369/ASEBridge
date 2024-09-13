@@ -38,6 +38,7 @@ const App = () => {
           <Route path='/asebridge/post/:id' element={<PostDetails />} />
           <Route path='/asebridge/profile/:id/*' element={<Profile />} />
           <Route path='/asebridge/update-profile/:id' element={<UpdateProfile />} />
+          <Route path='/asebridge/*' element={<Home />} />
         </Route>
 
       </Routes>
