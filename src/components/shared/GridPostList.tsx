@@ -34,7 +34,7 @@ const GridPostList = ({
                 <img
                   src={
                     post.creator.imageUrl ||
-                    "/assets/icons/profile-placeholder.svg"
+                    "/asebridge/assets/icons/profile-placeholder.svg"
                   }
                   alt="creator"
                   className="w-8 h-8 rounded-full"

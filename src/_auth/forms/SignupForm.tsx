@@ -79,7 +79,7 @@ function SignupForm() {
     <Form {...form}>
 
       <div className="sm:w-420 flex-center flex-col">
-        <img src="/assets/images/ase.png" alt="logo" />
+        <img src="asebridge/assets/images/ase.png" alt="logo" />
         <h2 className='h3-bold md:h2-bold pt-5 sm:pt-12'>Create new account</h2>
         <p className='text-light-5 text-center small-medium md:base-regular mt-2'>
         To use ASE Com, please enter your details to create an account and connect with current and former ASE students worldwide. Share updates, seize opportunities, and build a global network with the ASE community.

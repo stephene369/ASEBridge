@@ -15,7 +15,7 @@ const LeftSidebar = () => {
     <nav className="leftsidebar">
       <div className="flex flex-col gap-11">
         <Link to='/' className="flex gap-3 items-center">
-          <img src="/assets/images/ase.png" alt="logo"
+          <img src="/asebridge/assets/images/ase.png" alt="logo"
             width={150}
             height={36}
           />
@@ -66,7 +66,7 @@ const LeftSidebar = () => {
 
       <Button variant='ghost' className='shad-button_ghost'
         onClick={() => signOut()}>
-        <img src="/assets/icons/logout.svg" alt="logout" />
+        <img src="/asebridge/assets/icons/logout.svg" alt="logout" />
         <p>Logout</p>
       </Button>
     </nav>

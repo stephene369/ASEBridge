@@ -45,7 +45,7 @@ const FileUploader = ({ fieldChange, mediaUrl }: FieldUploaderProps) => {
           ) : (
             <div className="file_uploader-box ">
               <img
-                src="/assets/icons/file-upload.svg"
+                src="/asebridge/assets/icons/file-upload.svg"
                 width={96}
                 height={77}
                 alt="file upload"

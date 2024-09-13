@@ -20,7 +20,7 @@ const Topbar = () => {
         <section className="topbar">
             <div className="flex-between py-4 px-5 bg">
                 <Link to='/' className="flex gap-3 items-center">
-                    <img src="/assets/images/ase.png" alt="logo"
+                    <img src="/asebridge/assets/images/ase.png" alt="logo"
                         width={130}
                         height={325}
                     />
@@ -29,12 +29,12 @@ const Topbar = () => {
                 <div className="flex gap-4">
                     <Button variant='ghost' className='shad-button_ghost'
                         onClick={() => signOut()}>
-                        <img src="/assets/icons/logout.svg" alt="logout" />
+                        <img src="/asebridge/assets/icons/logout.svg" alt="logout" />
                     </Button>
 
                     <Link to={`/profile/${user.id}`} className='flex-center gap-3' >
                         <img className='h-8 w-8 rounded-full'
-                            src={user.imageUrl || '/assets/icons/profile-placeholder.svg'} alt="profile" />
+                            src={user.imageUrl || '/asebridge/assets/icons/profile-placeholder.svg'} alt="profile" />
                     </Link>
                 </div>
             </div>
