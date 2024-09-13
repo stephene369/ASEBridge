@@ -53,7 +53,7 @@ function SignupForm() {
       if (!session) {
         toast({ title: "Something went wrong. Please login your new account", });
         
-        navigate("/sign-in");
+        navigate("/asebridge/sign-in");
         
         return;
       }
@@ -63,7 +63,7 @@ function SignupForm() {
       if (isLoggedIn) {
         form.reset();
 
-        navigate("/");
+        navigate("/asebridge/");
       } else {
         toast({ title: "Login failed. Please try again.", });
         
@@ -78,11 +78,14 @@ function SignupForm() {
   return (
     <Form {...form}>
 
-      <div className="sm:w-420 flex-center flex-col">
-        <img src="asebridge/assets/images/ase.png" alt="logo" />
+      <div className="sm:w-420 flex-center flex-col m-16">
+        <img src="/asebridge/assets/images/ase.png" alt="logo" />
         <h2 className='h3-bold md:h2-bold pt-5 sm:pt-12'>Create new account</h2>
         <p className='text-light-5 text-center small-medium md:base-regular mt-2'>
-        To use ASE Com, please enter your details to create an account and connect with current and former ASE students worldwide. Share updates, seize opportunities, and build a global network with the ASE community.
+
+        
+To start using ASE Com, enter your details to create an account and connect with current and former ASE students across the globe. Share updates, explore opportunities, and grow your network within the ASE community.
+        
         </p>
 
 
@@ -151,7 +154,7 @@ function SignupForm() {
             ) : "Sign up"}
           </Button>
           <p className="text-small-regular text-light-2 text-center">
-            Already have an account? <Link className='text-primary-500 text-small-semibold ml-1' to='/sign-in'>Log in</Link>
+            Already have an account? <Link className='text-primary-500 text-small-semibold ml-1' to='/asebridge/sign-in'>Log in</Link>
           </p>
         </form>
       </div>

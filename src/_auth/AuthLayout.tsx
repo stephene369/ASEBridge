@@ -8,7 +8,7 @@ function AuthLayout() {
     <>
       {
         isAuthenticated ?
-          <Navigate to='/' /> : (
+          <Navigate to='/asebridge/' /> : (
             <>
               <section className='flex flex-1 justify-center items-center flex-col py-10 bg-white' >
                 <Outlet />

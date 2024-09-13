@@ -16,7 +16,7 @@ const PostCard = ({ post }: PostCardProps) => {
     <div className="post-card">
       <div className="flex-between">
         <div className="flex items-center gap-3">
-          <Link to={`/profile/${post.creator.id}`} >
+          <Link to={`/asebridge/profile/${post.creator.id}`} >
             <img
               src={post?.creator?.imageUrl || '/assets/icons/profile-placeholder.svg'}
               alt="creator"
@@ -39,13 +39,13 @@ const PostCard = ({ post }: PostCardProps) => {
 
 
 
-        <Link to={`/update-post/${post.$id}`}
+        <Link to={`/asebridge/update-post/${post.$id}`}
           className={`${user.id !== post.creator.$id && 'hidden'} `} >
           <i className='bx bx-edit text-blue-500' style={{ fontSize: '20px' }}></i>
         </Link>
       </div>
 
-      <Link to={`/post/${post.$id}`}>
+      <Link to={`/asebridge/post/${post.$id}`}>
         <div className="small-medium lg:base-medium py-5">
           <p className='text-light-1'>{post.caption}</p>
           <ul className="flex gap-1 mt-2">

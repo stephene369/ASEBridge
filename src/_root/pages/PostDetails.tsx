@@ -35,7 +35,7 @@ const PostDetails = () => {
           variant="ghost"
           className="shad-button_ghost">
           <img
-            src={"/asebridge/asebridge/assets/icons/back.svg"}
+            src={"/asebridge/assets/icons/back.svg"}
             alt="back"
             width={24}
             height={24}
@@ -57,7 +57,7 @@ const PostDetails = () => {
           <div className="post_details-info">
             <div className="flex-between w-full">
               <Link
-                to={`/profile/${post?.creator.$id}`}
+                to={`/asebridge/profile/${post?.creator.$id}`}
                 className="flex items-center gap-3">
                 <img
                   src={
@@ -85,7 +85,7 @@ const PostDetails = () => {
 
               <div className="flex-center gap-4">
                 <Link
-                  to={`/update-post/${post?.$id}`}
+                  to={`/asebridge/update-post/${post?.$id}`}
                   className={`${user.id !== post?.creator.$id && "hidden"}`}>
                   <img
                     src={"/asebridge/assets/icons/edit.svg"}

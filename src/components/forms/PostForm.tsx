@@ -59,12 +59,12 @@ export const PostForm = ({ post , action }: PostFormProps ) => {
       })
       if(!updatePost){ toast({title: "Please try again"}) }
 
-      return navigate(`/posts/${post.$id}`)
+      return navigate(`/asebridge/posts/${post.$id}`)
     }
 
     const newPost = await CreatePost({ ...values , userId: user.id, })
     if(!newPost){ toast({title: "Please try again"}) } 
-    navigate("/")
+    navigate("/asebridge/")
     
   }
 

@@ -14,14 +14,14 @@ const LeftSidebar = () => {
   return (
     <nav className="leftsidebar">
       <div className="flex flex-col gap-11">
-        <Link to='/' className="flex gap-3 items-center">
+        <Link to='/asebridge/' className="flex gap-3 items-center">
           <img src="/asebridge/assets/images/ase.png" alt="logo"
             width={150}
             height={36}
           />
         </Link>
 
-        <Link to={`/profile/${user.id}`} className='flex gap-3 items-center'>
+        <Link to={`/asebridge/profile/${user.id}`} className='flex gap-3 items-center'>
           <img
             className='h-14 w-14 rounded-full'
             src={user.imageUrl || '/assets/icons/ceholder.svg'}

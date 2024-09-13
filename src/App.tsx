@@ -22,22 +22,22 @@ const App = () => {
       <Routes>
         {/* Public Routes */}
         <Route element={<AuthLayout />}>
-          <Route path='sign-in' element={<SigninForm />} />
-          <Route path='sign-up' element={<SignupForm />} />
+          <Route path='/asebridge/sign-in' element={<SigninForm />} />
+          <Route path='/asebridge/sign-up' element={<SignupForm />} />
         </Route>
 
 
         {/* Privete Routes */}
         <Route element={<RootLayout />}>
           <Route path='/asebridge/' element={<Home />} />
-          <Route path='/explore' element={<Explore />} />
-          <Route path='/saved' element={<Saved />} />
-          <Route path='/all-users' element={<AllUsers />} />
-          <Route path='/create-post' element={<CreatePost />} />
-          <Route path='/update-post/:id' element={<EditPost />} />
-          <Route path='/post/:id' element={<PostDetails />} />
-          <Route path='/profile/:id/*' element={<Profile />} />
-          <Route path='/update-profile/:id' element={<UpdateProfile />} />
+          <Route path='/asebridge/explore' element={<Explore />} />
+          <Route path='/asebridge/saved' element={<Saved />} />
+          <Route path='/asebridge/all-users' element={<AllUsers />} />
+          <Route path='/asebridge/create-post' element={<CreatePost />} />
+          <Route path='/asebridge/update-post/:id' element={<EditPost />} />
+          <Route path='/asebridge/post/:id' element={<PostDetails />} />
+          <Route path='/asebridge/profile/:id/*' element={<Profile />} />
+          <Route path='/asebridge/update-profile/:id' element={<UpdateProfile />} />
         </Route>
 
       </Routes>

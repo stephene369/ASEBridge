@@ -36,7 +36,7 @@ const SigninForm = () => {
 
       if (!session) {
         toast({ title: "Login failed. Please try again." });
-        navigate("/")
+        navigate("/asebridge/")
         return;
       }
 
@@ -45,22 +45,22 @@ const SigninForm = () => {
       if (isLoggedIn) {
         form.reset();
 
-        navigate("/");
+        navigate("/asebridge/");
       } else {
         toast({ title: "Login failed. Please try again.", });
 
         return;
       }
     } catch {
-      navigate("/")
+      navigate("/asebridge/")
     }
 
   };
 
   return (
     <Form {...form}>
-      <div className="sm:w-420 flex-center flex-col">
-        <img src="asebridge/assets/images/ase.png" alt="logo" />
+      <div className="sm:w-420 flex-center flex-col m-16">
+        <img src="/asebridge/assets/images/ase.png" alt="logo" />
 
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">
           Log in to your account
@@ -114,7 +114,7 @@ const SigninForm = () => {
 
             Don't have an account?
             <Link
-              to="/sign-up"
+              to="/asebridge/sign-up"
               className="text-primary-500 text-small-semibold ml-1">
               Sign up
             </Link>
