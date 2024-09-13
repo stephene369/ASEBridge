@@ -180,8 +180,6 @@ export function getFilePreview(fileId: string) {
       fileId,
       2000,
       2000,
-      "top",
-      100
     );
 
     if (!fileUrl) throw Error;
@@ -368,7 +366,7 @@ export async function updatePost(post: IUpdatePost) {
 
 
 
-export async function deletePost(postId: string) {
+export async function deletePost(postId: string | undefined, postId: string) {
   if (!postId) return;
 
   try {
@@ -377,6 +375,7 @@ export async function deletePost(postId: string) {
       appwriteConfig.postCollectionId,
       postId
     );
+    if (!statusCode) return ;
     return { status: 'ok' };
   } catch (error) {
     console.log(error);
