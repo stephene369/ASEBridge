@@ -1,8 +1,31 @@
 import { Link, useLocation } from 'react-router-dom'
-import { bottombarLinks } from '../../constants';
 
 const Bottombar = () => {
   const { pathname } = useLocation();
+
+  const bottombarLinks = [
+    {
+      icon: "bx-home",
+      route: "/asebridge",
+      label: "Home",
+    },
+    {
+      icon: "bx-image",
+      route: "/asebridge/explore",
+      label: "Explore",
+    },
+    {
+      icon: "bx-bookmark",
+      route: "/asebridge/saved",
+      label: "Saved",
+    },
+    {
+      icon: "bx-image-add",
+      route: "/asebridge/create-post",
+      label: "Create",
+    },
+  ];
+
 
   return (
 
