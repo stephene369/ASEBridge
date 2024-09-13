@@ -178,8 +178,8 @@ export function getFilePreview(fileId: string) {
     const fileUrl = storage.getFilePreview(
       appwriteConfig.storageId,
       fileId,
-      2000,
-      2000,
+      1300,
+      1300,
     );
 
     if (!fileUrl) throw Error;
@@ -189,7 +189,6 @@ export function getFilePreview(fileId: string) {
     console.log(error);
   }
 }
-
 
 export async function deleteFile(fileId: string) {
   try {
