@@ -1,14 +1,14 @@
-import { sidebarLinks } from '@/constants';
-import { useUserContext } from '@/context/AuthContext'
-import { useSignOutAccount } from '@/lib/react-query/queriesAndMutations';
-import { INavLink } from '@/types';
-import React from 'react'
+import { sidebarLinks } from '../../constants';
+import { useUserContext } from '../../context/AuthContext'
+import { useSignOutAccount } from '../../lib/react-query/queriesAndMutations';
+import { INavLink } from '../../types';
+
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Button } from '../ui/button';
 
 const LeftSidebar = () => {
   const { user } = useUserContext();
-  const { mutate: signOut, isSuccess } = useSignOutAccount();
+  const { mutate: signOut } = useSignOutAccount();
   const { pathname } = useLocation();
 
   return (

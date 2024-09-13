@@ -1,8 +1,7 @@
-import { useUserContext } from "@/context/AuthContext";
+import { useUserContext } from "../../context/AuthContext";
 import { Models } from "appwrite";
 import { Link } from "react-router-dom";
 import PostStats from "./PostStats";
-import React from "react";
 
 type GridPostListProps = {
   posts: Models.Document[];

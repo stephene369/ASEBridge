@@ -1,8 +1,7 @@
-import React, { useCallback, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { FileWithPath, useDropzone } from 'react-dropzone'
 import { Button } from '../ui/button'
-import { Field } from 'react-hook-form';
-import { convertFileToUrl } from '@/lib/utils';
+import { convertFileToUrl } from '../../lib/utils';
 
 type FieldUploaderProps = {
     fieldChange: (files: File[]) => void;

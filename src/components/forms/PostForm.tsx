@@ -29,7 +29,7 @@ type PostFormProps = {
 export const PostForm = ({ post , action }: PostFormProps ) => {
   const { mutateAsync: CreatePost, isPending: isLoadingCreating } = useCreatePost();
   const { mutateAsync: UpdatePost, isPending: isLoadingUpdate } = useUpdatePost();
-  const { mutateAsync: DeletePost, isPending: isLoadingDelete } = useDeletePost();
+  const {  isPending: isLoadingDelete } = useDeletePost();
 
 
   const { user } = useUserContext();
