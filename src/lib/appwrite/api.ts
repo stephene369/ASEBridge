@@ -366,7 +366,7 @@ export async function updatePost(post: IUpdatePost) {
 
 
 
-export async function deletePost(postId: string | undefined, postId: string) {
+export async function deletePost(postId: string | undefined, imageId?: string) {
   if (!postId) return;
 
   try {
@@ -375,7 +375,12 @@ export async function deletePost(postId: string | undefined, postId: string) {
       appwriteConfig.postCollectionId,
       postId
     );
-    if (!statusCode) return ;
+    if (!statusCode) return;
+
+    if (imageId) {
+      await deleteFile(imageId);
+    }
+
     return { status: 'ok' };
   } catch (error) {
     console.log(error);
