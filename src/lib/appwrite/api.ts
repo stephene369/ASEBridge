@@ -57,8 +57,8 @@ export async function saveUserToDB(user: {
 export async function signInAccount(user: { email: string; password: string }) {
   try {
     // First, attempt to delete any existing session
-    console.log("Deleting any existing session...");
-    await signOutAccount();
+    //console.log("Deleting any existing session...");
+    //await signOutAccount();
 
     // Now proceed with creating a new session
     console.log("Creating a new session...");

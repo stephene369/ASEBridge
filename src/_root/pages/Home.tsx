@@ -6,6 +6,9 @@ import PostCard from '../../components/shared/PostCard';
 function Home() {
   const {data: posts, isPending:isPostLoading } = useGetRecentPosts()
 
+  console.log("URL", import.meta.env.VITE_APPWRITE_URL)
+  console.log("PROJECT ID", import.meta.env.VITE_APPWRITE_PROJECT_ID)
+
   return (
     <div className="flex flex-1">
       <div className="home-container">
