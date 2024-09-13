@@ -11,6 +11,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import {  LoaderCircle, LoaderCircleIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom';
+import { z } from 'zod';
 
 
 const UpdateProfile = () => {

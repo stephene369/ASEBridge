@@ -18,8 +18,8 @@ function SignupForm() {
   const navigate = useNavigate();
 
   const { mutateAsync: createUserAccount, isPending: isCreatingUser } = useCreateUserAccount();
-  const { mutateAsync: signInAccount, isPending: isSigningIn } = useSignInAccount();
-  const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
+  const { mutateAsync: signInAccount  } = useSignInAccount();
+  const { checkAuthUser } = useUserContext();
 
 
 
