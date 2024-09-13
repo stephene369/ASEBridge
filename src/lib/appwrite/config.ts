@@ -1,11 +1,10 @@
 import { Client, Account, Databases, Storage, Avatars } from "appwrite";
 
-const apiUrl = `${import.meta.env.VITE_APPWRITE_URL}${import.meta.env.BASE_URL}`;
 //${import.meta.env.BASE_URL}
 
 export const appwriteConfig = {
   projectId: import.meta.env.VITE_APPWRITE_PROJECT_ID,
-  url: apiUrl, 
+  url: import.meta.env.VITE_APPWRITE_URL, 
   databaseId: import.meta.env.VITE_APPWRITE_DATABASE_ID,
   storageId: import.meta.env.VITE_APPWRITE_STORAGE_ID,
   userCollectionId: import.meta.env.VITE_APPWRITE_USER_COLLECTION_ID,
