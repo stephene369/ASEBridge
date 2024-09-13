@@ -68,7 +68,9 @@ const SigninForm = () => {
         <p className="text-light-3 small-medium md:base-regular mt-2">
           Welcome back! Please sign in to join the community.
         </p>
-        <p className='text-light-5 text-center small-medium md:base-regular mt-2'>This is a beta test version, and we would love to gather your feedback. Please note that access will be limited soon.</p>
+        <p className='text-light-5 text-center small-medium md:base-regular mt-2'>
+        This is a beta version, and we would greatly appreciate your feedback. 
+          </p>
         <form
           onSubmit={form.handleSubmit(handleSignin)}
           className="flex flex-col gap-5 w-full mt-4">
