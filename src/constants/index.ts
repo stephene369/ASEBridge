@@ -47,4 +47,9 @@ export const sidebarLinks = [
       route: "/asebridge/create-post",
       label: "Create",
     },
+        {
+      imgURL: "/asebridge/assets/icons/people.svg",
+      route: "/asebridge/all-users",
+      label: "People",
+    },
   ];

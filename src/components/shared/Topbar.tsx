@@ -9,6 +9,10 @@ const Topbar = () => {
     const navigate = useNavigate();
     const { user } = useUserContext();
 
+    console.log(
+        "Je suis user" ,user
+    )
+
     //console.log(user)
     useEffect(() => {
         if (isSuccess) {

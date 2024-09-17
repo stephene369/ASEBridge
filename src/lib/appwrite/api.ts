@@ -101,19 +101,18 @@ export async function getCurrentUser() {
     return null;
   }
 }
-
 export async function signOutAccount() {
   try {
     const session = await account.deleteSession("current");
+    
+    // Redirect to sign-in page after successful sign out
+    window.location.href = "/sign-in";
 
     return session;
   } catch (error) {
     console.log(error);
   }
 }
-
-
-
 
 
 export async function createPost(post: INewPost) {

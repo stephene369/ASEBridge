@@ -8,6 +8,11 @@ const Bottombar = () => {
       icon: "bx-home",
       route: "/asebridge",
       label: "Home",
+    },    
+    {
+      icon: "bx-group",
+      route: "/asebridge/all-users",
+      label: "People",
     },
     {
       icon: "bx-image",
@@ -24,6 +29,7 @@ const Bottombar = () => {
       route: "/asebridge/create-post",
       label: "Create",
     },
+
   ];
 
 
@@ -35,7 +41,6 @@ const Bottombar = () => {
           const isActive = pathname === link.route;
 
           return (
-
             <Link to={link.route}
               key={link.label}
               className={`${isActive && 'bg-primary-500 rounded-[10px]'} flex-center flex-col gap-1 p-2 transition`} >

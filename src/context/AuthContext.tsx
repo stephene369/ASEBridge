@@ -54,11 +54,14 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                 setIsAuthenticated(true);
 
                 return true;
+              }else{
+                navigate("/asebridge/sign-up");
               }
         
               return false;
             } catch (error) {
               console.error(error);
+              navigate("/asebridge/sign-up");
               return false;
             } finally {
               setIsLoading(false);

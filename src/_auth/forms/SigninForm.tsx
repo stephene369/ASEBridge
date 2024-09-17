@@ -2,7 +2,8 @@ import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Link, useNavigate } from 'react-router-dom'
 import { Button } from "../../components/ui/button"
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,
+import {
+  Form, FormControl, FormField, FormItem, FormLabel, FormMessage,
 } from "../../components/ui/form"
 import { Input } from "../../components/ui/input"
 import { useForm } from "react-hook-form"
@@ -48,7 +49,6 @@ const SigninForm = () => {
         navigate("/asebridge/");
       } else {
         toast({ title: "Login failed. Please try again.", });
-
         return;
       }
     } catch {
@@ -60,17 +60,28 @@ const SigninForm = () => {
   return (
     <Form {...form}>
       <div className="sm:w-420 flex-center flex-col m-16">
-        <img src="/asebridge/assets/images/ase.png" alt="logo" />
+        <img src="/asebridge/assets/images/ase.png" alt="logo"
+          width={250}
+        />
 
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">
           Log in to your account
         </h2>
+        <p className="text-small-regular text-light-2 text-center mt-2">
+
+          Don't have an account?
+          <Link
+            to="/asebridge/sign-up"
+            className="text-blue-900 text-small-semibold ml-1">
+            Sign up
+          </Link>
+        </p>
         <p className="text-light-3 small-medium md:base-regular mt-2">
           Welcome back! Please sign in to join the community.
         </p>
         <p className='text-light-5 text-center small-medium md:base-regular mt-2'>
-        This is a beta version, and we would greatly appreciate your feedback. 
-          </p>
+          This is a beta version, and we would greatly appreciate your feedback.
+        </p>
         <form
           onSubmit={form.handleSubmit(handleSignin)}
           className="flex flex-col gap-5 w-full mt-4">
