@@ -52,7 +52,7 @@ const SigninForm = () => {
         return;
       }
     } catch {
-      navigate("/asebridge/")
+      navigate("/asebridge/sign-in")
     }
 
   };
