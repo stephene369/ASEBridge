@@ -1,12 +1,12 @@
 import './index.css'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import SigninForm from './_auth/forms/SigninForm'
 import { Home } from './_root/pages'
 import AuthLayout from './_auth/AuthLayout'
 import RootLayout from './_root/RootLayout'
 import SignupForm from './_auth/forms/SignupForm'
 import { Toaster } from "./components/ui/toaster"
-import {CreatePost} from './_root/pages'
+import { CreatePost } from './_root/pages'
 import EditPost from './_root/pages/EditPost'
 import PostDetails from './_root/pages/PostDetails'
 import Explore from './_root/pages/Explore'
@@ -14,7 +14,6 @@ import Profile from './_root/pages/Profile'
 import AllUsers from './_root/pages/AllUsers'
 import Saved from './_root/pages/Saved'
 import UpdateProfile from './_root/pages/UpdateProfile'
-
 
 const App = () => {
   return (
@@ -26,8 +25,7 @@ const App = () => {
           <Route path='/asebridge/sign-up' element={<SignupForm />} />
         </Route>
 
-
-        {/* Privete Routes */}
+        {/* Private Routes */}
         <Route element={<RootLayout />}>
           <Route path='/asebridge/' element={<Home />} />
           <Route path='/asebridge/explore' element={<Explore />} />
@@ -38,9 +36,10 @@ const App = () => {
           <Route path='/asebridge/post/:id' element={<PostDetails />} />
           <Route path='/asebridge/profile/:id/*' element={<Profile />} />
           <Route path='/asebridge/update-profile/:id' element={<UpdateProfile />} />
-          <Route path='/asebridge/*' element={<Home />} />
-        </Route>
 
+          {/* Catch-all Route for Undefined Paths */}
+          <Route path='/asebridge/*' element={<Navigate to="/asebridge/" replace />} />
+        </Route>
       </Routes>
       <Toaster />
     </main>
