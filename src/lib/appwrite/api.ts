@@ -67,6 +67,11 @@ export async function signInAccount(user: { email: string; password: string }) {
     return session;
   } catch (error) {
     console.log(error);
+    if (error instanceof Error && error.message.includes("Creation of a session is prohibited when a session is active.")) {
+      // Redirect to Home
+      window.location.href = '/'; // Assuming '/' is the home route
+      return;
+    }
     return false;
     //throw error; // Re-throw the error to be handled by the caller
   }
